@@ -9,7 +9,7 @@
         // ১. যদি লগইন করা না থাকে
         if (!user || !user.isLoggedIn) {
             alert("⚠️ Please login to access premium tools!");
-            window.location.replace("index.html"); // হোমপেজে পাঠিয়ে দেবে
+            window.location.replace("../index.html"); // হোমপেজে পাঠিয়ে দেবে
         } 
         
     })();
@@ -47,7 +47,7 @@
         </div>
     </div>
     
-    <button onclick="window.location.href='index.html?dashboard=true'" class="px-5 py-2.5 rounded-lg bg-zinc-900 border border-zinc-700 text-white hover:bg-red-500 hover:text-white hover:border-red-400 transition-all font-bold text-sm flex items-center gap-2">
+    <button onclick="window.location.href='../index.html?dashboard=true'" class="px-5 py-2.5 rounded-lg bg-zinc-900 border border-zinc-700 text-white hover:bg-red-500 hover:text-white hover:border-red-400 transition-all font-bold text-sm flex items-center gap-2">
         <i class="ph-bold ph-arrow-left"></i> <span class="hidden md:inline">Dashboard</span>
     </button>
 </nav>
