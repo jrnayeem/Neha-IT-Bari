@@ -1,25 +1,22 @@
+<!-- ========================================= -->
+<!-- 🔒 VIP SECURITY CHECK (DO NOT REMOVE) 🔒 -->
+<!-- ========================================= -->
+<script>
+    (function() {
+        const user = JSON.parse(localStorage.getItem('proToolsUser'));
+        const now = new Date().getTime();
+
+        if (!user || !user.isLoggedIn) {
+            alert("⚠️ Please login to access premium tools!");
+            window.location.replace("../index.html"); 
+        } 
+    })();
+</script>
+<!-- ========================================= -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- ========================================= -->
-    <!-- 🔒 VIP SECURITY CHECK 🔒 -->
-    <!-- ========================================= -->
-    <script>
-        (function() {
-            try {
-                const user = JSON.parse(localStorage.getItem('proToolsUser'));
-
-                if (!user || !user.isLoggedIn || !user.username) {
-                    alert("⚠️ Please login to access premium tools!");
-                    window.location.replace("../index.html");
-                }
-            } catch (error) {
-                localStorage.removeItem('proToolsUser');
-                window.location.replace("../index.html");
-            }
-        })();
-    </script>
-    <!-- ========================================= -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Video Course - Premium Access</title>
@@ -80,16 +77,10 @@
             <p class="text-blue-400 font-medium text-sm md:text-base">Watch all your premium recorded video classes below. Follow step-by-step to start your successful CPA journey.</p>
         </div>
 
-        <!-- Test Video -->
-<div class="w-full max-w-4xl mx-auto">
-    <iframe
-    src="https://player.mediadelivery.net/embed/631069/f43ea652-0c8c-432a-aeb9-25c37e93e1d0?autoplay=false"
-    style="width:100%; height:500px; border:0;"
-    allow="accelerometer; gyroscope; encrypted-media; picture-in-picture;"
-    allowfullscreen
-    referrerpolicy="no-referrer">
-</iframe>
-</div>
+        <!-- Video Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full" id="videoGrid">
+            <!-- Videos will be injected here via JavaScript -->
+        </div>
 
     </div>
 
@@ -106,6 +97,26 @@
             { title: "Class 9: Fresh Offers সাইন আপ মেথড", url: "https://player.mediadelivery.net/embed/631069/414fc4eb-78c3-40a4-b8af-f67d440aa11b?autoplay=false" },
             { title: "Class 10: Withdrawals & Next Steps", url: "https://player.mediadelivery.net/embed/631069/0bc51550-af74-4bc2-824a-8c0ee4af4446?autoplay=false" }
         ];
+
+        const grid = document.getElementById('videoGrid');
+        grid.innerHTML = COURSE_VIDEOS.map((video, index) => `
+            <div class="neon-panel bg-[#09090b] flex flex-col justify-between group">
+                <div class="video-container">
+                    <iframe
+                        src="${video.url}"
+                        allow="accelerometer; gyroscope; encrypted-media; picture-in-picture;"
+                        allowfullscreen
+                        referrerpolicy="no-referrer">
+                    </iframe>
+                </div>
+                <div class="p-5 flex items-start gap-3">
+                    <div class="w-8 h-8 rounded-full bg-blue-600/20 text-blue-400 flex items-center justify-center font-black shrink-0 border border-blue-500/30">
+                        ${index + 1}
+                    </div>
+                    <p class="text-white font-bold text-sm leading-relaxed">${video.title}</p>
+                </div>
+            </div>
+        `).join('');
 
         // Security Options
         document.addEventListener('contextmenu', event => event.preventDefault());
