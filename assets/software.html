@@ -1,0 +1,119 @@
+<!-- ========================================= -->
+<!-- 🔒 VIP SECURITY CHECK (DO NOT REMOVE) 🔒 -->
+<!-- ========================================= -->
+<script>
+    (function() {
+        const user = JSON.parse(localStorage.getItem('proToolsUser'));
+        const now = new Date().getTime();
+
+        if (!user || !user.isLoggedIn) {
+            alert("⚠️ Please login to access premium tools!");
+            window.location.replace("index.html"); 
+        } 
+    })();
+</script>
+<!-- ========================================= -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Software - Automation Bots</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <script>
+      tailwind.config = { 
+          theme: { 
+              extend: { 
+                  fontFamily: { sans: ['Inter', 'sans-serif'] }
+              } 
+          } 
+      }
+    </script>
+    <style> 
+      body { background-color: #020617 !important; color: #f8fafc !important; margin:0; font-family: 'Inter', sans-serif; overflow-x: hidden; }
+      
+      .neon-panel { background-color: #09090b; border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 20px; transition: all 0.3s ease; position: relative; overflow: hidden; }
+      .glow-cyan:hover { border-color: rgba(34, 211, 238, 0.6); box-shadow: 0 0 30px rgba(34, 211, 238, 0.25); transform: translateY(-5px); }
+      .glow-fuchsia:hover { border-color: rgba(232, 121, 249, 0.6); box-shadow: 0 0 30px rgba(232, 121, 249, 0.25); transform: translateY(-5px); }
+
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar { width: 8px; }
+      ::-webkit-scrollbar-track { background: transparent; }
+      ::-webkit-scrollbar-thumb { background: #334155; border-radius: 10px; }
+      ::-webkit-scrollbar-thumb:hover { background: #d946ef; }
+    </style>
+</head>
+<body>
+
+    <nav class="fixed top-0 left-0 w-full h-[70px] z-50 px-4 md:px-6 flex justify-between items-center bg-[#09090b]/95 backdrop-blur-xl border-b border-zinc-800">
+        <div class="flex items-center gap-3">
+            <div class="w-10 h-10 flex items-center justify-center bg-fuchsia-500/10 rounded-xl text-fuchsia-400 border border-fuchsia-500/30 shadow-[0_0_15px_rgba(217,70,239,0.2)] shrink-0">
+                <i class="ph-fill ph-robot text-2xl"></i>
+            </div>
+            <div>
+                <span class="text-[10px] text-fuchsia-400 font-bold block leading-none mb-1 uppercase tracking-wider">Premium Access</span>
+                <span class="text-sm md:text-lg font-black text-white leading-none">Exclusive Software</span>
+            </div>
+        </div>
+        
+        <button onclick="window.location.href='index.html'" class="px-4 py-2 md:px-5 md:py-2.5 rounded-lg bg-zinc-900 border border-zinc-700 text-white hover:bg-fuchsia-600 hover:border-fuchsia-500 transition-all font-bold text-xs md:text-sm flex items-center gap-2 shrink-0 shadow-lg">
+            <i class="ph-bold ph-arrow-left"></i> <span class="hidden md:inline">Dashboard</span>
+        </button>
+    </nav>
+
+    <div class="w-full min-h-screen pt-[110px] pb-20 px-4 md:px-6 max-w-[1200px] mx-auto flex flex-col items-center">
+        
+        <div class="text-center mb-12 max-w-2xl mx-auto">
+            <h1 class="text-3xl md:text-4xl font-extrabold text-white mb-4">Download Automation Bots</h1>
+            <p class="text-fuchsia-400 font-medium text-sm md:text-base">Download the premium desktop and mobile tools securely below. Ensure you extract ZIP files before installing on Windows.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
+            
+            <!-- Auto Clicker Bot -->
+            <div class="neon-panel glow-cyan p-8 md:p-10 bg-zinc-900 border border-zinc-800 border-t-4 border-t-cyan-500 flex flex-col justify-between group">
+                <div class="text-center mb-8 mt-2">
+                    <div class="w-24 h-24 bg-cyan-500/10 rounded-3xl flex items-center justify-center mx-auto mb-6 border border-cyan-500/30 group-hover:scale-110 transition-transform duration-500">
+                        <i class="ph-fill ph-robot text-6xl text-cyan-400 drop-shadow-[0_0_15px_rgba(6,182,212,0.6)]"></i>
+                    </div>
+                    <h4 class="text-2xl md:text-3xl font-black text-white mb-3 tracking-tight">Auto Clicker Bot</h4>
+                    <p class="text-zinc-400 text-sm leading-relaxed px-4">Automate your repetitive tasks effortlessly. Advanced randomization logic to avoid detection.</p>
+                </div>
+                <a href="https://drive.google.com/file/d/1Byn3SLjaJF7NQb4Qi4R0cDGqZ7SiRZub/view?usp=sharing" target="_blank" class="w-full py-4 bg-zinc-800 hover:bg-cyan-600 hover:border-cyan-500 text-white font-black rounded-xl shadow-lg border border-zinc-700 transition-colors flex justify-center items-center gap-3">
+                    <i class="ph-bold ph-download-simple text-2xl"></i> Download For PC (.zip)
+                </a>
+            </div>
+
+            <!-- Anti-Detect Browser -->
+            <div class="neon-panel glow-fuchsia p-8 md:p-10 bg-zinc-900 border border-zinc-800 border-t-4 border-t-fuchsia-500 flex flex-col justify-between group">
+                <div class="text-center mb-8 mt-2">
+                    <div class="w-24 h-24 bg-fuchsia-500/10 rounded-3xl flex items-center justify-center mx-auto mb-6 border border-fuchsia-500/30 group-hover:scale-110 transition-transform duration-500">
+                        <i class="ph-fill ph-browser text-6xl text-fuchsia-400 drop-shadow-[0_0_15px_rgba(217,70,239,0.6)]"></i>
+                    </div>
+                    <h4 class="text-2xl md:text-3xl font-black text-white mb-3 tracking-tight">Anti-Detect Browser</h4>
+                    <p class="text-zinc-400 text-sm leading-relaxed px-4">Manage multiple accounts securely without fingerprints. Separate downloads for Mobile and PC.</p>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="https://drive.google.com/file/d/1nHkC4jWpuSAI5_Do1kO3OHT6wV3Pg0_n/view?usp=sharing" target="_blank" class="flex-1 py-4 bg-zinc-800 hover:bg-blue-600 hover:border-blue-500 text-white font-black rounded-xl shadow border border-zinc-700 transition-colors flex justify-center items-center gap-2">
+                        <i class="ph-fill ph-desktop text-2xl text-blue-400 group-hover:text-white transition-colors"></i> PC
+                    </a>
+                    <a href="https://drive.google.com/file/d/1fToucChv4ASQuXtnGdeVON7XMjYsnFub/view?usp=sharing" target="_blank" class="flex-1 py-4 bg-zinc-800 hover:bg-green-600 hover:border-green-500 text-white font-black rounded-xl shadow border border-zinc-700 transition-colors flex justify-center items-center gap-2">
+                        <i class="ph-fill ph-device-mobile text-2xl text-green-400 group-hover:text-white transition-colors"></i> Mobile
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('contextmenu', event => event.preventDefault());
+    </script>
+</body>
+</html>
