@@ -1,0 +1,39 @@
+[[redirects]]
+  from = "/address-number"
+  to = "/assets/address-number.html"
+  status = 200
+
+[[redirects]]
+  from = "/email-checker"
+  to = "/assets/email-checker.html"
+  status = 200
+
+[[redirects]]
+  from = "/email-generator"
+  to = "/assets/email-generator.html"
+  status = 200
+
+[[redirects]]
+  from = "/fake-name-generator"
+  to = "/assets/fake-name-generator.html"
+  status = 200
+
+[[redirects]]
+  from = "/software"
+  to = "/assets/software.html"
+  status = 200
+
+[[redirects]]
+  from = "/useragent-generator"
+  to = "/assets/useragent-generator.html"
+  status = 200
+
+[[redirects]]
+  from = "/useragent-random-mix"
+  to = "/assets/useragent-random-mix.html"
+  status = 200
+
+[[redirects]]
+  from = "/videocourse"
+  to = "/assets/videocourse.html"
+  status = 200
